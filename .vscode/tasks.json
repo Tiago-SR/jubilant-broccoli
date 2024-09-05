@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compilar y ejecutar C++",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "clear && g++ ${file} -o ${fileDirname}/${fileBasenameNoExtension}.out && ${fileDirname}/${fileBasenameNoExtension}.out"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Limpia la consola, compila y ejecuta el archivo CPP",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    }
+  ]
+}
